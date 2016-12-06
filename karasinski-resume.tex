@@ -1,0 +1,220 @@
+% resume.tex
+% vim:set ft=tex spell:
+
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage{mdwlist}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% format two pieces of text, one left aligned and one right aligned
+\newcommand{\headerrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+	#1 &
+	#2 \\
+\end{tabular*}}
+
+% make "C++" look pretty when used in text by touching up the plus signs
+\newcommand{\CPP}
+{C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
+
+% and the actual content starts here
+\begin{document}
+
+\begin{center}
+{\LARGE \textbf{John Karasinski}}
+
+\ PO BOX 3144\ \ \textbullet
+\ \ Orangevale, CA 95662
+\\
+(916) 467-2727\ \ \textbullet
+\ \ karasinski@gmail.com
+\end{center}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{University of California, Davis}}
+		{\textbf{Davis, CA}}
+	\\
+	\headerrow
+		{\emph{Ph.D. Mechanical and Aerospace Engineering}}
+		{\emph{2013 -- Current}}
+	\begin{itemize*}
+		\item Human systems integration and control theory
+	\end{itemize*}
+
+	\headerrow
+		{\emph{M.S. Mechanical and Aerospace Engineering}}
+		{\emph{2013-2016}}
+	\begin{itemize*}
+		\item Real-time performance feedback for manually guided spacecraft operations
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{University of California, Santa Cruz}}
+		{\textbf{Santa Cruz, CA}}
+	\\
+	\headerrow
+		{\emph{B.S. Physics}}
+		{\emph{2008-2012}}
+	\begin{itemize*}
+		\item High-energy astroparticle physics with the Fermi Gamma-ray Telescope
+	\end{itemize*}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Experience}
+
+\begin{itemize}
+	\parskip=0.1em
+
+	\item
+	\headerrow
+		{\textbf{UC Davis Center for Human/Robotics/Vehicle Integration and Performance}}
+		{\textbf{Davis, CA}}
+	\\
+	\headerrow
+		{\emph{Graduate Student Researcher}}
+		{\emph{2013 -- Current}}
+	\begin{itemize*}
+		\item Development and validation of methods to assess task performance in real-time and provide immediate feedback to improve mission outcomes for spaceflight operations
+		\item Simulation development for the analysis of human performance and human-automation interaction
+		\item Multiple human subject research campaigns
+		\item Computer-vision techniques for autonomous spacecraft rendezvous and docking
+		\item Optimal control theory for spacecraft attitude pointing
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{San José State University Research Foundation}}
+		{\textbf{NASA Ames Research Center, Moffett Field, CA}}
+	\\
+	\headerrow
+		{\emph{Research Intern}}
+		{\emph{June -- September 2016}}
+	\begin{itemize*}
+		\item Designed and built a prototype of a mobile procedure viewer with the goals of reducing execution time, training time, and procedure execution errors for astronauts on the International Space Station
+		\item Directed design interns on prototyping, usability testing, analysis and feasibility tasks
+		\item Mentored software development interns learning Arduino, node, and Unity to accomplish tasks
+		\item Integrated HoloLens augmented reality display and ESP8266 hardware through a MQTT broker
+		\item Software development with Unity, node, and C++
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Foodfully, Inc.}}
+		{\textbf{Davis, CA}}
+	\\
+	\headerrow
+		{\emph{Lead Software Developer}}
+		{\emph{2015-Current}}
+	\begin{itemize*}
+		\item Full-stack Development of web, iOS, and Android app using Javascript, Meteor, MongoDB, and React
+		% \item
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Teachers Curriculum Institute}}
+		{\textbf{Mountain View, CA}}
+	\\
+	\headerrow
+		{\emph{Software Developer}}
+		{\emph{2013-2015}}
+	\begin{itemize*}
+		\item Development of interactive science curriculum, comprehensive educational suite, and online store
+		\item Software development in JavaScript, HTML5, and Ruby on Rails
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{Handstand Inc.}}
+		{\textbf{Mountain View, CA}}
+	\\
+	\headerrow
+		{\emph{Content Administrator}}
+		{\emph{2011 -- 2012}}
+	\begin{itemize*}
+		\item Curated and published a library of over 2,000 creative commons and open source textbooks for free use
+		\item Assisted with the design, creation, and quality assurance of both the mobile and web applications
+		\item Selected science, technology, engineering, and mathematics (STEM) textbooks for use with Android \\ education application
+		\item Effectively managed small teams of 3-7 people to complete various start up projects
+	\end{itemize*}
+
+	\item
+	\headerrow
+		{\textbf{University of California, Santa Cruz}}
+		{\textbf{Santa Cruz, CA}}
+	\\
+	\headerrow
+		{\emph{Undergraduate Student Researcher}}
+		{\emph{2010 -- 2012}}
+	\begin{itemize*}
+		\item Search for `smoking gun' signatures of dark matter in the galactic center
+		\item High energy gamma-ray timing analyses with the Fermi Gamma Ray Telescope
+	\end{itemize*}
+	\headerrow
+		{\emph{Junior Specialist}}
+		{\emph{2009 -- 2010, Balloon Campaigns 2011-13}}
+	\begin{itemize*}
+		\item Computer-aided testing and evaluation of hardware and software for use on both test and final BARREL (Balloon Array for RBSP Relativistic Electron Losses) balloon campaigns
+		\item Monitored data acquisition and performance of balloons during multiple campaigns to determine the electron loss rate during RBSP relativistic electron events
+	\end{itemize*}
+\end{itemize}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Selected Publications}
+
+\nocite{*}
+\renewcommand{\section}[2]{}%
+\bibliography{publications}
+\bibliographystyle{aiaa}
+
+\hrule
+\vspace{-0.4em}
+\subsection*{Core Technical Skills}
+
+\begin{indentsection}{\parindent}
+\hyphenpenalty=1000
+\begin{description*}
+	\item[Core Languages:]
+	Python, Javascript
+	\item[Additional Languages:]
+	FORTRAN, C++, MATLAB, Simulink, \LaTeX, jQuery, Ruby on Rails, HTML5, CSS3
+	\item[Development Environments:]
+	Linux, OS X, Windows
+\end{description*}
+\end{indentsection}
+
+\end{document}
