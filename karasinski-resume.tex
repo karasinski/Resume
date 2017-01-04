@@ -39,14 +39,20 @@
 \newcommand{\CPP}
 {C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
 
+% Remove numbers from publications
+\makeatletter
+\def\@bibitem#1{\item[]%
+    \if@filesw\immediate\write\@auxout{\string \bibcite {#1}{\the\value{\@listctr }}}\fi\ignorespaces}
+\makeatletter
+
 % and the actual content starts here
 \begin{document}
 
 \begin{center}
 {\LARGE \textbf{John Karasinski}}
 
-\ PO BOX 3144\ \ \textbullet
-\ \ Orangevale, CA 95662
+\ 625 G Street\ \ \textbullet
+\ \ Daivs, CA 95616
 \\
 (916) 467-2727\ \ \textbullet
 \ \ karasinski@gmail.com
@@ -75,7 +81,7 @@
 		{\emph{M.S. Mechanical and Aerospace Engineering}}
 		{\emph{2013-2016}}
 	\begin{itemize*}
-		\item Real-time performance feedback for manually guided spacecraft operations
+		\item Real-time performance feedback for the manual control of spacecraft
 	\end{itemize*}
 
 	\item
@@ -139,8 +145,8 @@
 		{\emph{Lead Software Developer}}
 		{\emph{2015-Current}}
 	\begin{itemize*}
-		\item Full-stack Development of web, iOS, and Android app using Javascript, Meteor, MongoDB, and React
-		% \item
+		\item Development of web, iOS, and Android mobile apps to reduce household food waste
+		\item Full-stack software development in Javascript, Meteor, MongoDB, and React
 	\end{itemize*}
 
 	\item
@@ -171,6 +177,7 @@
 		\item Effectively managed small teams of 3-7 people to complete various start up projects
 	\end{itemize*}
 
+	\clearpage
 	\item
 	\headerrow
 		{\textbf{University of California, Santa Cruz}}
@@ -213,7 +220,7 @@
 	\item[Additional Languages:]
 	FORTRAN, C++, MATLAB, Simulink, \LaTeX, jQuery, Ruby on Rails, HTML5, CSS3
 	\item[Development Environments:]
-	Linux, OS X, Windows
+	Linux, macOS, Windows, Android, iOS
 \end{description*}
 \end{indentsection}
 
