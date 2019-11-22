@@ -1,6 +1,3 @@
-% resume.tex
-% vim:set ft=tex spell:
-
 \documentclass[10pt,letterpaper]{article}
 \usepackage[letterpaper,margin=0.75in]{geometry}
 \usepackage[utf8]{inputenc}
@@ -14,10 +11,13 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=cyan,
+    urlcolor=blue,
 }
+
+\usepackage{doi}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+% \setcitestyle{authoryear,open={((},close={))}}
 
 % indentsection style, used for sections that aren't already in lists
 % that need indentation to the level of all text in the document
@@ -42,6 +42,7 @@
 	#1 &
 	#2 \\
 \end{tabular*}}
+
 
 % make "C++" look pretty when used in text by touching up the plus signs
 \newcommand{\CPP}
@@ -126,7 +127,7 @@
         \item Development and design of Playbook scheduling tool
 		\item Software development with python, Unity, node, and C\#
 	\end{itemize*}
-	
+
     \item
 	\headerrow
 		{\textbf{UC Davis Center for Human/Robotics/Vehicle Integration and Performance}}
@@ -231,7 +232,6 @@
 \nocite{*}
 \renewcommand{\section}[2]{}%
 \bibliography{publications}
-\bibliographystyle{aiaa}
 
 \hrule
 \vspace{-0.4em}
@@ -243,7 +243,7 @@
 	\item[Core Languages:]
 	Python, Javascript
 	\item[Additional Languages:]
-	FORTRAN, \CPP, C#, MATLAB, Simulink, \LaTeX, jQuery, Ruby on Rails, HTML5, CSS3
+	C\#, FORTRAN, \CPP, MATLAB, Simulink, \LaTeX, jQuery, Ruby on Rails, HTML5, CSS3
 	\item[Development Environments:]
 	Linux, macOS, Windows, Android, iOS
 \end{description*}
