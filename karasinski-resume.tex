@@ -1,5 +1,5 @@
 \documentclass[10pt,letterpaper]{article}
-\usepackage[letterpaper,margin=0.75in]{geometry}
+\usepackage[letterpaper,margin=0.5in,top=0.5in,bottom=0.5in]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{mdwlist}
 \usepackage[T1]{fontenc}
@@ -11,16 +11,16 @@
 \usepackage{hyperref}
 \hypersetup{
     colorlinks=true,
-    urlcolor=blue,
+    urlcolor=black,
+    linkcolor=black,
+    citecolor=black,
 }
 
 \usepackage{doi}
 \usepackage{natbib}
 \bibliographystyle{unsrtnat}
-% \setcitestyle{authoryear,open={((},close={))}}
 
-% indentsection style, used for sections that aren't already in lists
-% that need indentation to the level of all text in the document
+% indentsection style
 \newenvironment{indentsection}[1]%
 {\begin{list}{}%
 	{\setlength{\leftmargin}{#1}}%
@@ -28,23 +28,14 @@
 }
 {\end{list}}
 
-% opposite of above; bump a section back toward the left margin
-\newenvironment{unindentsection}[1]%
-{\begin{list}{}%
-	{\setlength{\leftmargin}{-0.5#1}}%
-	\item[]%
-}
-{\end{list}}
-
-% format two pieces of text, one left aligned and one right aligned
+% format two pieces of text, one left and one right
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
 	#1 &
 	#2 \\
 \end{tabular*}}
 
-
-% make "C++" look pretty when used in text by touching up the plus signs
+% make "C++" look pretty
 \newcommand{\CPP}
 {C\nolinebreak[4]\hspace{-.05em}\raisebox{.22ex}{\footnotesize\bf ++}}
 
@@ -58,77 +49,66 @@
 \begin{document}
 
 \begin{center}
-	{\LARGE \textbf{John Karasinski, Ph.D.}}
+	{\LARGE \textbf{John A. Karasinski, Ph.D.}}
 
-	\ 752 Emily Dr\ \ \textbullet
-	\ \ Mountain View, CA 94043
+	Mountain View, CA 94043
 	\\
-	\hspace{1.2em} (916) 467-2727\ \ \textbullet
-	\ \ karasinski@gmail.com
+	(916) 467-2727\ \ \textbullet
+	\ \ \href{mailto:karasinski@gmail.com}{karasinski@gmail.com}\ \ \textbullet
+	\ \ \href{https://www.linkedin.com/in/jkarasinski/}{linkedin.com/in/jkarasinski}\ \ \textbullet
+	\ \ \href{https://scholar.google.com/citations?user=06yynpAAAAAJ&hl=en}{Google Scholar}
 \end{center}
 
-\hrule
-\vspace{-0.4em}
-\subsection*{Education}
-
-\begin{itemize}
-	\parskip=0.1em
-
-	\item
-	      \headerrow
-	      {\textbf{University of California, Davis}}
-	      {\textbf{Davis, CA}}
-	      \\
-	      \headerrow
-	      {\emph{Ph.D. Mechanical and Aerospace Engineering}}
-	      {\emph{2016 -- 2020}}
-	      \begin{itemize*}
-		      \item \href{https://www.proquest.com/openview/05d051e7e94924c33a057025e8de1de5/}{Concurrent Bandwidth Feedback for Complex Manual Control Tasks}
-	      \end{itemize*}
-
-	      \headerrow
-	      {\emph{M.S. Mechanical and Aerospace Engineering}}
-	      {\emph{2013 -- 2016}}
-	      \begin{itemize*}
-		      \item \href{https://www.proquest.com/openview/f01da2042f2b34196cc130290d5a9a0d/}{Real-Time Performance Feedback for the Manual Control of Spacecraft}
-	      \end{itemize*}
-
-	\item
-	      \headerrow
-	      {\textbf{University of California, Santa Cruz}}
-	      {\textbf{Santa Cruz, CA}}
-	      \\
-	      \headerrow
-	      {\emph{B.S. Physics}}
-	      {\emph{2008 -- 2012}}
-	      \begin{itemize*}
-		      \item High-energy astroparticle physics with the Fermi Gamma-ray Telescope
-	      \end{itemize*}
-\end{itemize}
+\vspace{-0.5em}
+\subsection*{Professional Summary}
+\begin{indentsection}{\parindent}
+A Human Factors researcher with a Ph.D. in Aerospace Engineering specializing in the intersection of human performance and space exploration. Focused on ensuring the safety, comfort, and mission success of astronauts by developing and designing crew-facing systems for next-generation spacecraft. Proven ability to translate technical requirements into intuitive and effective interfaces to solve the unique challenges of long-duration spaceflight.
+\end{indentsection}
 
 \hrule
-\vspace{-0.4em}
+\vspace{-0.5em}
 \subsection*{Experience}
 
 \begin{itemize}
-	\parskip=0.1em
+	\parskip=0.05em 
 
 	\item
 	      \headerrow
 	      {\textbf{NASA Ames Research Center}}
 	      {\textbf{Moffett Field, CA}}
 	      \\
-		  \headerrow
-		  {\emph{Research AST, Human/Machine Systems}} % 9/2020 - current
-	      {\emph{September 2020 -- Current}} % 8/2017 - 9/2020
+	      \headerrow
+		  {\emph{AST, Technical Management}}
+	      {\emph{August 2023 -- Current}}
+          \headerrow
+		  {\emph{Research AST, Human/Machine Systems}} 
+	      {\emph{September 2020 -- June 2022}}
 		  \headerrow
 	      {\emph{NASA Pathways Intern}}
-	      {\emph{August 2017 -- 2020}} % 8/2017 - 9/2020
+	      {\emph{August 2017 -- September 2020}}
+	      \headerrow
+	      {\emph{Research Intern (Contractor via SJSU Research Foundation)}}
+	      {\emph{June 2016 -- August 2017}}
 	      \begin{itemize*}
-		      \item Human factors and human performance within the Human Systems Integration Division
-		      \item NESC Mars Crew Size human performance modeling, HLS contract insight
-		      \item Scheduling and planning tool development, design, and research with Playbook
-		      \item Software development with Javascript, node, Python, Unity, and C\#
+                \item Lead human factors research and technology development within the Human Research Program and Mars Campaign Office to define human-system requirements for future deep space missions.
+                \item Provide Human Health and Performance (HH\&P) insight for commercial partners (e.g., SpaceX, Blue Origin) to ensure Human Landing System (HLS) designs meet NASA's safety and usability standards.
+                \item Conducted foundational research in human-computer interaction and human-automation integration, designing and building functional prototypes to demonstrate novel human-system capabilities.
+                \item Contribute to research and development of Playbook, a mission-critical planning and execution tool that supports crew operations for analog missions (HERA, CHAPEA) and lunar payload deliveries (CLPS).
+	      \end{itemize*}
+
+	\item
+	      \headerrow
+	      {\textbf{Blue Origin}}
+	      {\textbf{Kent, WA}}
+	      \\
+		  \headerrow
+		  {\emph{Human Factors Engineer III}}
+	      {\emph{June 2022 -- August 2023}}
+	      \begin{itemize*}
+                \item Served as the responsible engineer for Blue Origin's User Interface for Operational Displays Standard, applied across all programs (New Shepard, New Glenn, Blue Moon, Orbital Reef, etc.).
+                \item Authored, evaluated, and verified human factors (HF) requirements for human-rated spacecraft, directly enhancing astronaut safety, comfort, and mission experience.
+                \item Conducted comprehensive HF analyses, including task and human error analysis, to proactively identify and mitigate risks in crew procedures and system interfaces.
+                \item Designed and executed high-fidelity HITL tests with astronaut-facing hardware to validate crew systems and inform design iterations.
 	      \end{itemize*}
 
 	\item
@@ -138,35 +118,16 @@
 	      \\
 	      \headerrow
 	      {\emph{Senior Researcher}}
-	      {\emph{May 2020 -- Current}} % 5/2020 - Current
+	      {\emph{June 2020 -- June 2022}}
 		  \headerrow
 	      {\emph{Graduate Student Researcher}}
-	      {\emph{November 2013 -- 2020}} % 11/13 - 5/2020
+	      {\emph{November 2013 -- June 2020}}
 	      \begin{itemize*}
-		      \item Development and validation of methods to assess task performance in real-time and provide immediate feedback to improve mission outcomes for spaceflight operations
-		      \item Customized refresher and just-in-time training for long-duration spaceflight crews
-		      \item Simulation development for the analysis of human performance and human-automation interaction
-		      \item Multiple human subject research campaigns
-		      \item Computer-vision techniques for autonomous spacecraft rendezvous and docking
-		      \item Optimal control theory for spacecraft attitude pointing
+		      \item Developed and validated novel methods for the real-time assessment of operator performance, providing a foundation for adaptive training systems for long-duration spaceflight.
+		      \item Engineered complex, high-fidelity simulations to analyze human-automation interaction and performance, supporting multiple human-subject research campaigns.
+              \item Researched and applied computer-vision techniques for autonomous spacecraft rendezvous and docking, and utilized optimal control theory for spacecraft attitude pointing.
 	      \end{itemize*}
-
-	\item
-	      \headerrow
-	      {\textbf{San José State University Research Foundation}}
-	      {\textbf{Moffett Field, CA}}
-	      \\
-	      \headerrow
-	      {\emph{Research Intern}}
-	      {\emph{June 2016 -- August 2017}} % 6/2016 - 9/2016
-	      \begin{itemize*}
-		      \item Designed and built a prototype of a mobile procedure viewer with the goals of reducing execution time, training time, and procedure execution errors for astronauts on the International Space Station
-		      \item Directed design interns on prototyping, usability testing, analysis and feasibility tasks
-		      \item Mentored software development interns learning Arduino, node, and Unity to accomplish tasks
-		      \item Integrated HoloLens augmented reality display and ESP8266 hardware through a MQTT broker
-		      \item Software development with Unity, node, and \CPP
-	      \end{itemize*}
-
+	
 	\item
 	      \headerrow
 	      {\textbf{Foodfully, Inc.}}
@@ -174,12 +135,11 @@
 	      \\
 	      \headerrow
 	      {\emph{Lead Software Developer}}
-	      {\emph{2015-2018}} % 10/2015 - 1/2018?
+	      {\emph{2015 -- 2018}}
 	      \begin{itemize*}
-		      \item Development of web, iOS, and Android mobile apps to reduce household food waste
-		      \item Full-stack software development in Javascript, Meteor, MongoDB, and React
+		      \item Led full-stack development (JavaScript, Meteor, MongoDB, React) for a consumer-facing application suite designed to reduce household food waste.
 	      \end{itemize*}
-
+	      
 	\item
 	      \headerrow
 	      {\textbf{Teachers Curriculum Institute}}
@@ -187,10 +147,9 @@
 	      \\
 	      \headerrow
 	      {\emph{Software Developer}}
-	      {\emph{2013-2015}} % 4/2013 - 1/2015
+	      {\emph{2013 -- 2015}}
 	      \begin{itemize*}
-		      \item Development of interactive science curriculum, comprehensive educational suite, and online store
-		      \item Software development in JavaScript, HTML5, and Ruby on Rails
+		      \item Developed interactive K-12 science curriculum and a comprehensive educational software suite.
 	      \end{itemize*}
 
 	\item
@@ -200,15 +159,11 @@
 	      \\
 	      \headerrow
 	      {\emph{Content Administrator}}
-	      {\emph{2011 -- 2012}} % 11/2011 - 12/2012
+	      {\emph{2011 -- 2012}}
 	      \begin{itemize*}
-		      \item Curated and published a library of over 2,000 creative commons and open source textbooks for free use (over 2 million views as of January 2017, see \url{https://archive.org/details/opensource_textbooks})
-		      \item Assisted with the design, creation, and quality assurance of both the mobile and web applications
-		      \item Selected science, technology, engineering, and mathematics (STEM) textbooks for use with Android \\ education application
-		      \item Effectively managed small teams of 3-7 people to complete various start up projects
+		      \item Managed a team of 5 to build and curate a digital library of over 2,000 open-source STEM textbooks, achieving over 2 million views.
 	      \end{itemize*}
 
-	      % \clearpage
 	\item
 	      \headerrow
 	      {\textbf{University of California, Santa Cruz}}
@@ -216,42 +171,68 @@
 	      \\
 	      \headerrow
 	      {\emph{Undergraduate Student Researcher}}
-	      {\emph{2010 -- 2012}} % 6/2016 - 6/2012
-	      \headerrow
-	      {\emph{Junior Specialist}}
-	      {\emph{2009 -- 2010, Balloon Campaigns 2011-13}} % 11/2009 - 03/2013
+	      {\emph{2009 -- 2013}}
 	      \begin{itemize*}
-		      \item Search for `smoking gun' signatures of dark matter in the galactic center
-		      \item High energy gamma-ray timing analyses with the Fermi Gamma Ray Telescope
-		      \item Computer-aided testing and evaluation of hardware and software for use on both test and final BARREL (Balloon Array for RBSP Relativistic Electron Losses) balloon campaigns
-		      \item Monitored data acquisition and performance of balloons during multiple campaigns to determine the electron loss rate during RBSP relativistic electron events
+	      	  \item Conducted high-energy gamma-ray timing analysis using data from the Fermi Gamma Ray Telescope for a senior thesis investigating potential signatures of dark matter.
+		      \item Performed computer-aided testing, evaluation, and data analysis for the BARREL balloon campaign, a NASA mission studying relativistic electron loss events in Earth's radiation belts.
 	      \end{itemize*}
+
 \end{itemize}
 
-% \clearpage
 \hrule
-\vspace{-0.2em}
+\vspace{-0.5em}
+\subsection*{Education}
+
+\begin{itemize}
+	\parskip=0.1em
+	\item
+	      \headerrow
+	      {\textbf{University of California, Davis}}
+	      {\textbf{Davis, CA}}
+	      \\
+	      \headerrow
+	      {\emph{Ph.D. Mechanical and Aerospace Engineering}}
+	      {\emph{2016 -- 2020}}
+	      \\
+	      \emph{Dissertation: \href{https://www.proquest.com/dissertations-theses/concurrent-bandwidth-feedback-complex-manual/docview/2449468766/se-2}{Concurrent Bandwidth Feedback for Complex Manual Control Tasks}}
+	      \vspace{0.5em} % Adds a bit of space after the Ph.D. entry
+	      \\
+	      \headerrow
+	      {\emph{M.S. Mechanical and Aerospace Engineering}}
+	      {\emph{2013 -- 2016}}
+	      \\
+	      \emph{Thesis: \href{https://www.proquest.com/dissertations-theses/real-time-performance-feedback-manual-control/docview/1872339216/se-2}{Real-Time Performance Feedback for the Manual Control of Spacecraft}}
+	\item
+	      \headerrow
+	      {\textbf{University of California, Santa Cruz}}
+	      {\textbf{Santa Cruz, CA}}
+	      \\
+	      \headerrow
+	      {\emph{B.S. Physics}}
+	      {\emph{2008 -- 2012}}
+	      \\
+	      \emph{Thesis: A High Energy Timing Analysis with the Fermi Gamma-Ray Telescope}
+\end{itemize}
+
+\hrule
+\vspace{-0.5em}
+\subsection*{Technical Skills}
+
+\begin{indentsection}{\parindent}
+	\hyphenpenalty=1000
+	\begin{description*}
+		\item[Core Languages:] Python, Typescript/Javascript, R, C\# 
+		\item[Human Factors:] Human-in-the-Loop (HITL) Simulation, Systems Safety \& Human Error Analysis, Human-Automation Integration, UX Research, Human-Centered Design, Mixed Model Statistical Analysis
+		\item[Frameworks \& Engineering Tools:] React, MongoDB, Unity, MATLAB, Simulink, Ruby on Rails, \LaTeX, FORTRAN, \CPP
+	\end{description*}
+\end{indentsection}
+
+\hrule
+\vspace{-0.5em}
 \subsection*{Selected Publications}
 
 \nocite{*}
 \renewcommand{\section}[2]{}%
 \bibliography{publications}
-
-\vspace{0.4em}
-\hrule
-\vspace{-0.2em}
-\subsection*{Core Technical Skills}
-
-\begin{indentsection}{\parindent}
-	\hyphenpenalty=1000
-	\begin{description*}
-		\item[Core Languages:]
-		Python, Javascript
-		\item[Additional Languages:]
-		C\#, FORTRAN, \CPP, R, MATLAB, Simulink, \LaTeX, jQuery, Ruby on Rails, HTML5, CSS3
-		\item[Development Environments:]
-		Linux, macOS, Windows, Android, iOS
-	\end{description*}
-\end{indentsection}
 
 \end{document}
